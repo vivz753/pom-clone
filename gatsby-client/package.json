@@ -37,6 +37,7 @@
     "twin.macro": "^2.2.2"
   },
   "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
     "prettier": "2.2.1"
   },
   "repository": {
