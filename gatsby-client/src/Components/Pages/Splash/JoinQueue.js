@@ -19,14 +19,14 @@ const JoinQueue = ({email, handleInput, handleSubmit}) => {
       <title>
         POM - The dating app for music lovers
       </title>
-      <p className="py-8 text-6xl text-regular text-white">
+      <div className="py-8 text-6xl text-regular text-white">
         THE DATING APP FOR
         <br>
         </br>
-      <span className="text-6xl text-underline text-regular text-red-400 pb-4">
+      <p className="underline text-red-400 py-4">
         MUSIC LOVERS
-      </span>
       </p>
+      </div>
       <div className="px-16 items-center flex flex-col">
         <p className="py-4 w-4/6 text-lg text-white text-bold font-regular">
           POM harnesses the Power of Music, channelling it into an exciting, new inclusive dating app.
