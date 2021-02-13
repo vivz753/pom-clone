@@ -1,2 +1,2 @@
-export const __serverUrl__ = "https://secure-savannah-93312.herokuapp.com"
-export const __magicKey__ = "pk_test_83F682D53028B37E"
+export const __serverUrl__ = process.env.GATSBY_SERVER_URL
+export const __magicKey__ = process.env.GATSBY_MAGIC_PKEY

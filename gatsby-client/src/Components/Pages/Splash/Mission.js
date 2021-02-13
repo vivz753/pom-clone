@@ -2,9 +2,9 @@ import React from "react";
 import tw from "twin.macro"
 import Button from "../../Common/Button"
 
-const Container = tw.container`w-full flex flex-col`;
+const Container = tw.div`w-full flex flex-col`;
 const GrayContainer = tw(Container)`bg-gray-100 flex flex-row`;
-const Content2 = tw.container`mx-auto w-1/2 items-center text-center`
+const Content2 = tw.div`mx-auto w-1/2 items-center text-center`
 const ButtonStyle = tw`text-red-400 text-base py-1 px-8 mt-4 bg-transparent hover:text-white hover:bg-red-400 border-4 border-red-400 rounded-full`
 
 const Mission = () => {

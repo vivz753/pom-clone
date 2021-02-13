@@ -24,8 +24,6 @@ export const Store = ({ children }) => {
       /* On page refresh, send a request to /api/user to see if there's a valid user session */
       try {
         const { user } = (await axios.get(`${__serverUrl__}/api/user`, { withCredentials: true })).data
-        console.log("user from token")
-        console.log(user)
 
         return user;
 

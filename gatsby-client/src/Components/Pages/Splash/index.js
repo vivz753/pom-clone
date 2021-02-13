@@ -7,7 +7,7 @@ import SignupModal from "./SignupModal"
 
 const Splash = () => {
   const [magic] = useContext(MagicContext);
-  const [setLoggedIn] = useContext(LoggedInContext);
+  const [loggedIn, setLoggedIn] = useContext(LoggedInContext);
   
   const [email, setEmail] = useState('')
   const [showSignupModal, setShowSignupModal] = useState(false); // signup modal

@@ -11,7 +11,6 @@ const ButtonStyle = tw`text-red-400 text-base py-1 px-8 mt-4 bg-transparent hove
 const Row = tw.div`flex flex-row`
 
 const SignupModal = ({closeModal, setLoggedIn, magic, email}) => {
-
   const [loadingSignup, setLoadingSignup] = useState(false); // this loading refers to the user attempting to login and verify the DIDT with the DB
 
   const [signupState, setSignupState] = useState({
@@ -29,7 +28,6 @@ const SignupModal = ({closeModal, setLoggedIn, magic, email}) => {
       ...signupState,
       [key]: value,
     })
-    console.log(signupState);
   }
 
   const authenticateSignup = async (DIDT) => {
