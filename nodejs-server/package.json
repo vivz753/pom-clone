@@ -4,7 +4,8 @@
   "description": "To serve the pom-clone client",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo \"this is a test\""
   },
   "engine": {
     "node": "12.19.0"
