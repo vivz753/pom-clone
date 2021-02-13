@@ -7,6 +7,22 @@ import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa"
 const Container = tw.container`w-full flex flex-col`;
 const PurpleContainer = tw(Container)`bg-purple-800`;
 
+const Bar = (props) =>
+(
+  <div className={`rounded border border-${props.color}`} />
+)
+  
+const IconStyle = tw`text-purple-800 h-4 w-4`
+const HoverStyle = css`&:hover { color: #fbb03b }`
+const Icon = (props) =>
+  (
+    <div className="p-2 m-2 rounded-full bg-white">
+		{ props.icon==="facebook" && <FaFacebookF css={[ IconStyle, HoverStyle]}/> } 
+		{ props.icon==="twitter" && <FaTwitter css={[ IconStyle, HoverStyle]}/> } 
+		{ props.icon==="insta" && <FaInstagram css={[ IconStyle, HoverStyle]}/> } 
+  </div>
+)
+
 const H1 = (props) => (
   <div className="text-3xl font-regular font-bold pb-4" style={{ color: "#fbb03b" }} >
     {props.children}
@@ -14,19 +30,9 @@ const H1 = (props) => (
 )
 const YellowButtonStyle = tw`text-purple-800 px-4 text-sm m-2 mr-8 bg-white hover:text-yellow-400 hover:ring-yellow-400 ring-4 ring-white ring-inset rounded-md`
 
-const Bar = (props) =>
-(
-  <div className={`rounded border border-${props.color}`} />
-)
-  
-  const IconStyle = tw`text-purple-800 h-4 w-4`
-  const HoverStyle = css`&:hover { color: #fbb03b }`
-  const Icon = (props) =>
-  (
-    <div className="p-2 m-2 rounded-full bg-white">
-		{ props.icon==="facebook" && <FaFacebookF css={[ IconStyle, HoverStyle]}/> } 
-		{ props.icon==="twitter" && <FaTwitter css={[ IconStyle, HoverStyle]}/> } 
-		{ props.icon==="insta" && <FaInstagram css={[ IconStyle, HoverStyle]}/> } 
+const P = (props) => (
+  <div css={[HoverStyle]} >
+    {props.children}
   </div>
 )
 
@@ -38,22 +44,22 @@ const Footer = (props) => {
           <div className="pt-12 pb-6 flex flex-row items-start justify-between">
             <div className="flex flex-col">
               <H1>PAGES</H1>
-              <p>Home</p>
-              <p>How it works</p>
-              <p>Dating tips</p>
-              <p>Contact</p>
+              <P>Home</P>
+              <P>How it works</P>
+              <P>Dating tips</P>
+              <P>Contact</P>
             </div>
             <div className="flex flex-col">
               <H1>CONTACT</H1>
-              <p>hello@thepom.co</p>
-              <p>partnerships@thepom.co</p>
+              <P>hello@thepom.co</P>
+              <P>partnerships@thepom.co</P>
             </div>
             <div className="flex flex-col">
               <H1>LEGAL</H1>
-              <p>T & C's</p>
-              <p>Privacy Policy</p>
-              <p>Cookie Policy</p>
-              <p>Disclaimer</p>
+              <P>T & C's</P>
+              <P>Privacy Policy</P>
+              <P>Cookie Policy</P>
+              <P>Disclaimer</P>
             </div>
             <div className="flex flex-col">
               <H1>DOWNLOAD</H1>
