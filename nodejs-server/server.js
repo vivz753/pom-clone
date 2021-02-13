@@ -12,7 +12,8 @@ const app = express();
 const userRouter = require("./api/routes/userRoutes")
 
 const allowedOrigins = [
-	"https://localhost:8000"
+  "https://localhost:8000",
+  "https://vleung-pom.netlify.app"
 ];
 const corsOptions = {
 	origin: (origin, cb) => {

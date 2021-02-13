@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d49f5f42-b418-478f-9f36-501e705c1f91/deploy-status)](https://app.netlify.com/sites/brave-mcclintock-b452ac/deploys)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
