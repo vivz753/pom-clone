@@ -57,7 +57,7 @@ const SignupModal = ({closeModal, setLoggedIn, magic, email}) => {
           setLoadingSignup(false);
           setLoggedIn(authorizedUser);
           closeModal();
-          navigate("/app/welcome"); // TODO: add some alert to welcome the user, or redirect to user welcome page
+          navigate("/app/welcome");
         }
 
     } catch (err) {
