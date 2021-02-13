@@ -1,11 +1,14 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
+import { Link } from "gatsby"
 import tw from "twin.macro"
 import { Fade as Hamburger } from 'hamburger-react'
 import Button from "../Common/Button"
 import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa"
+import { LoggedInContext } from "../Store"
+
 
 const NavContainer = tw.nav`container mx-auto flex flex-wrap px-14 py-5 flex-col md:flex-row items-center`
-const H1 = tw.p`text-red-400 text-3xl font-regular font-bold`
+const H1 = tw.p`text-red-400 text-3xl font-regular font-bold hover:text-purple-800`
 const PinkButtonStyle = tw`text-red-400 py-2 px-6 text-base mt-4 bg-transparent hover:text-white hover:bg-red-400 ring-4 ring-red-400 ring-inset rounded-full`
 const PurpleButtonStyle = tw`text-purple-800 py-2 px-6 text-base mt-4 bg-transparent hover:text-white hover:bg-purple-800 ring-4 ring-purple-800 ring-inset rounded-full`
 
@@ -19,10 +22,10 @@ const Bar = (props) =>
   <div className={`rounded border border-${props.color}-400`} />
   )
   
-  const IconStyle = tw`hover:bg-purple-800 bg-red-400 text-white h-4 w-4`
+  const IconStyle = tw`text-white h-4 w-4`
   const Icon = (props) =>
   (
-    <div className="p-2 m-2 rounded-full bg-red-400">
+    <div className="p-2 m-2 rounded-full bg-red-400 hover:bg-purple-800">
 		{ props.icon==="facebook" && <FaFacebookF css={IconStyle}/> } 
 		{ props.icon==="twitter" && <FaTwitter css={IconStyle}/> } 
 		{ props.icon==="insta" && <FaInstagram css={IconStyle}/> } 
@@ -31,15 +34,21 @@ const Bar = (props) =>
 
 const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [loggedIn] = useContext(LoggedInContext);
   
   return (
     <>
     <header className="fixed flex w-full shadow-red-lg bg-white z-50">
       <NavContainer>
-        {/* <NavBar> */}
+        <Link to="/app">
           <img src="https://uploads-ssl.webflow.com/5f760442c871757baf72e5ee/5f847e77ef0f35843704c5b8_pom%20logo.svg" />
-        {/* </NavBar> */}
-        <div className="ml-auto">
+        </Link>
+        <div className="flex flex-row items-center ml-auto">
+          { loggedIn && (
+            <div className="font-regular text-red-400 mr-4">
+              <Link to="/app/welcome">{ loggedIn.email }</Link>
+            </div>
+          )}
           <Hamburger size={20} color={openDrawer ? "#ff779d" : "#6B7280"} toggled={openDrawer} toggle={setOpenDrawer} />
         </div>
       </NavContainer>
@@ -67,9 +76,9 @@ const Header = () => {
             </div>
           </div>
           <div className="text-xl flex flex-row justify-evenly py-8">
-            <p className="m-2">hello@thepom.com</p>
-            <p className="m-2">T & C's</p>
-            <p className="m-2">Privacy Policy</p>
+            <p className="m-2 hover:text-purple-800">hello@thepom.com</p>
+            <p className="m-2 hover:text-purple-800">T & C's</p>
+            <p className="m-2 hover:text-purple-800">Privacy Policy</p>
           </div>
           <div className="flex flex-row justify-evenly">
             <Icon icon="insta" />

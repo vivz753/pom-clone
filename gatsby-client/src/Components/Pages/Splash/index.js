@@ -1,28 +1,32 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useState } from "react"
+import { MagicContext, LoggedInContext } from "../../Store";
 import JoinQueue from "./JoinQueue"
 import Mission from "./Mission"
 import LearnMore from "./LearnMore"
+import SignupModal from "./SignupModal"
 
 const Splash = () => {
-
+  const [magic] = useContext(MagicContext);
+  const [setLoggedIn] = useContext(LoggedInContext);
+  
   const [email, setEmail] = useState('')
-
-  useEffect(()=> {
-    console.log(email)
-  }, [email])
-
+  const [showSignupModal, setShowSignupModal] = useState(false); // signup modal
+  
   const handleInput = (e) => {
     e.preventDefault();
     setEmail(e.target.value)
   }
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submit: " + email)
+    setShowSignupModal(true)
   }
 
   return (
     <>
+      { showSignupModal && (
+        <SignupModal email={email} closeModal={()=>setShowSignupModal(false)} setLoggedIn={setLoggedIn} magic={magic} />
+      )}
       <JoinQueue email={email} handleInput={handleInput} handleSubmit={handleSubmit} />
       <Mission />
       <LearnMore />

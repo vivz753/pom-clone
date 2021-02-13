@@ -11,11 +11,11 @@ const InputEntry = (props) => (
       props.width==="1/5" && tw`w-1/5`,
     ]}
   >
-    <p className="pl-2">
+    <p className="pl-2 text-red-400">
       {props.label}
     </p>
     <input
-      className="border-2 bg-transparent font-regular text-sm h-10 px-3 py-2 mt-2 w-full block rounded-full"
+      className="border-2 border-red-400 focus:border-red-700 bg-transparent font-regular text-red-400 text-sm h-10 px-3 py-2 mt-2 w-full block rounded-full focus:outline-none"
       css={props.style}
       disabled={props.disabled}
       name={props.name}

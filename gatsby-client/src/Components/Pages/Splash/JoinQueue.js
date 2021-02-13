@@ -3,9 +3,9 @@ import Button from "../../Common/Button"
 import InputEntry from "../../Common/InputEntry"
 import tw from "twin.macro"
 
-const Container = tw.container`w-full flex flex-col`;
+const Container = tw.div`w-full flex flex-col`;
 const PurpleContainer = tw(Container)`bg-purple-800`;
-const Content1 = tw.container`mx-auto py-64 items-center text-center`
+const Content1 = tw.div`mx-auto py-64 items-center text-center`
 
 const ButtonStyle = tw`text-purple-800 text-base py-1 px-8 mt-4 bg-red-400 hover:text-red-400 hover:bg-transparent border-4 border-red-400 rounded-full`
 const ButtonStyleDisabled = tw`text-purple-800 text-base py-1 px-8 mt-4 bg-red-400 border-4 border-red-400 rounded-full`
