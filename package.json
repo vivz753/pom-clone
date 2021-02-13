@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node local.js"
+    "start": "node nodejs-server/local.js"
   },
   "engine": {
     "node": "12.19.0"
