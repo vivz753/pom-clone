@@ -28,10 +28,10 @@ const H1 = (props) => (
     {props.children}
   </div>
 )
-const YellowButtonStyle = tw`text-purple-800 sm:px-4 px-1 sm:text-sm text-xs sm:m-2 md:mr-8 m-2 mr-4 bg-white hover:text-yellow-400 hover:ring-yellow-400 ring-4 ring-white ring-inset rounded-md`
+const YellowButtonStyle = tw`text-purple-800 sm:px-4 px-2 sm:text-sm text-xs sm:m-2 md:mr-8 m-2 mr-4 bg-white hover:text-yellow-400 hover:ring-yellow-400 ring-4 ring-white ring-inset rounded-md`
 
 const P = (props) => (
-  <div css={[HoverStyle]} >
+  <div className={props.className} tw="pb-1" css={[HoverStyle]} >
     {props.children}
   </div>
 )
@@ -40,34 +40,34 @@ const Footer = (props) => {
   return (
     <div className={props.className}>
       <PurpleContainer>
-        <div className="lg:my-10 my-3 w-full mx-auto w-full lg:px-32 md:px-12 px-8 text-white font-regular flex-col">
+        <div className="lg:my-10 my-3 w-full mx-auto w-full xl:px-64 lg:px-32 md:px-24 px-8 text-white lg:text-base text-sm font-regular flex-col">
           <div className="w-full pt-12 pb-6 flex flex-grow flex-wrap md:flex-row flex-col mx-auto text-center md:text-left">
             {/* <div className="w-full flex md:flex-row flex-col justify-evenly"> */}
-              <div className="lg:w-1/4 md:w-1/2 w-full px-4 flex flex-col">
+              <div className="lg:w-1/4 md:w-1/2 w-full px-4 pb-8 flex flex-col">
                 <H1>PAGES</H1>
                 <P>Home</P>
                 <P>How it works</P>
                 <P>Dating tips</P>
                 <P>Contact</P>
               </div>
-              <div className="lg:w-1/4 md:w-1/2 w-full px-4 flex flex-col">
+              <div className="lg:w-1/4 md:w-1/2 w-full px-4 pb-8 flex flex-col">
                 <H1>CONTACT</H1>
-                <P>hello@thepom.co</P>
-                <P>partnerships@thepom.co</P>
+                <P className="text-base">hello@thepom.co</P>
+                <P className="text-base">partnerships@thepom.co</P>
               </div>
             {/* </div> */}
             {/* <div className="w-full flex md:flex-row flex-col justify-evenly"> */}
-              <div className="lg:w-1/4 md:w-1/2 w-full px-4 flex flex-col">
+              <div className="lg:w-1/4 md:w-1/2 w-full px-4 pb-8 flex flex-col">
                 <H1>LEGAL</H1>
                 <P>T & C's</P>
                 <P>Privacy Policy</P>
                 <P>Cookie Policy</P>
                 <P>Disclaimer</P>
               </div>
-              <div className="lg:w-1/4 md:w-1/2 w-full px-4 flex flex-col">
+              <div className="lg:w-1/4 md:w-1/2 w-full px-4 pb-8 flex flex-col">
                 <H1>DOWNLOAD</H1>
                   <p className="pb-2">Coming soon on</p>
-                  <div className="mx-auto">
+                  <div className="mx-auto md:mr-auto md:ml-0">
                     <img className="w-28 py-2" src="https://uploads-ssl.webflow.com/5f760442c871757baf72e5ee/5f770de1931e3b3393750520_iOs%20WHite.svg" />
                     <img className="w-28 py-2" src="https://uploads-ssl.webflow.com/5f760442c871757baf72e5ee/5f770dfe6fd5e57af5bd11c4_Download%20Android.svg" />
                   </div>
@@ -77,7 +77,7 @@ const Footer = (props) => {
           <Bar color="white" />
           <div className=" flex flex-row justify-between items-end py-8">
             <div className="text-sm flex flex-row justify-evenly">
-              <p className="m-2">© POM 2020</p>
+              <p className="md:m-2 mb-2">© POM 2020</p>
             </div>
             <div className="flex flex-row justify-evenly">
               <Button style={YellowButtonStyle}>Manage Cookie Preferences</Button>

@@ -17,7 +17,7 @@ const LearnMore = () => {
     <PinkContainer>
       <Content1>
         <Fade bottom duration={2500}>
-          <div className="order-last flex flex-col lg:px-32 px-8 py-8 lg:w-1/2 mx-auto text-center items-center">
+          <div className="lg:order-first order-last flex flex-col md:px-50 sm:px-36 px-16 py-8 lg:w-1/2 mx-auto text-center items-center">
             <p className="lg:py-8 py-4 md:text-5xl text-4xl text-regular text-white">
               WANT TO KNOW HOW IT WORKS?
             </p>
